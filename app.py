@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     a=os.environ['Authorization']
-    return "นางสาว พัทธมณ แซ่เตียว เลขที่ 19 ชั้น ม.4/2"
+    return "นางสาวพัทธมณ แซ่เตียว เลขที่19 ชั้น ม.4/2"
 
 @app.route("/webhook", methods=['POST'])
 def webhook():
@@ -28,8 +28,7 @@ def callback():
     elif (userText == 'ไอ้บ้า') :
         sendText(user,'มึงอะบ้า')
     elif (userText == 'เหมือนหล่ออะ') :
-        sendText(user,'ควยไร')
-        sendText(user,'มึงพิมพ์อะไรของมึง')          
+        sendText(user,'ควยไร')          
     return '',200
 def sendText(user, text):
   LINE_API = 'https://api.line.me/v2/bot/message/reply'
